@@ -1,0 +1,26 @@
+.panel{
+  ul {
+    -webkit-padding-start: 0;
+    li {
+      list-style-type: none;
+      border-bottom: 1px solid $grey;
+      a {
+        display: block;
+        color: $brand;
+        padding:0.5em;
+        &:hover {
+          background-color: $grey;
+          color: $highlight;
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+  .panel-body.nav{
+    padding:0;
+    ul{
+      margin-bottom:0;
+    }
+  }
+}

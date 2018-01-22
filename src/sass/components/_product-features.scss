@@ -1,0 +1,23 @@
+.product-features{
+    background-color: $white;
+
+  .features-list {
+    display:flex;
+    flex-wrap: wrap;
+    padding:1em;
+  }
+  .product-feature{
+
+    img{
+
+      width:32px;
+      height:32px;
+    }
+    h4{
+
+    }
+    p{
+      display: block;
+    }
+  }
+}

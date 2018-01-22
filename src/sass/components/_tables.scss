@@ -1,0 +1,21 @@
+.table-brand{
+  th{
+    background-color:$brand;
+    color: $grey;
+  }
+  tr{
+    &:hover{
+      background-color: $grey;
+    }
+  }
+}
+.table-custom{
+  th{
+    background-color: $highlight;
+  }
+  tr{
+    &:hover{
+      background-color: $grey;
+    }
+  }
+}

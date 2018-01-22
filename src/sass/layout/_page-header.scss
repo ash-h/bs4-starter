@@ -1,0 +1,24 @@
+.page-header-custom{
+  background-color: $grey;
+  padding:1em;
+  border-bottom: 1px solid $brand;
+  margin-bottom:1em;
+}
+.page-sub-header{
+  color:$darkTone;
+  border-bottom: 1px solid $darkTone; border-bottom: 1px solid $grey;
+  font-family: $raleway;
+
+}
+
+.about-us-header{
+  @include header {
+    background-image: url("../../images/building1.jpg");
+  }
+}
+
+.blog-header{
+  @include header {
+    background-image: url("../../images/lipstick.jpg");
+  }
+}

@@ -1,0 +1,20 @@
+.list-group-custom{
+  -webkit-padding-start:0;
+  text-transform: lowercase;
+  .list-group-item {
+    display:block;
+    padding:0;
+    a{
+      display: block;
+      padding:0.5em;
+    }
+    :hover{
+      background-color: #00c3b6;
+    }
+    &.active{
+      background-color: $grey;
+      border-color: $grey;
+
+    }
+  }
+}

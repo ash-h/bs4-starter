@@ -1,0 +1,70 @@
+@import 'variables';
+//import google fonts
+
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dosis Regular'), local('Dosis-Regular'), url(https://fonts.gstatic.com/s/dosis/v6/oaBFj7Fz9Y9_eW3k9Jd9X6CWcynf_cDxXwCLxiixG1c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Titillium Web Regular'), local('TitilliumWeb-Regular'), url(https://fonts.gstatic.com/s/titilliumweb/v5/7XUFZ5tgS-tD6QamInJTceHuglUR2dhBxWD-q_ehMME.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: "Baloo";
+  src: url("../../fonts/Baloo/Baloo-Regular.ttf") format("ttf");
+
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/Raleway/Raleway-Regular.tff") format("ttf");
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("../../fonts/Raleway/Raleway-Bold.tff") format("ttf");
+}
+
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url("../../fonts/Raleway/Raleway-Thin.tff") format("ttf");
+}
+@font-face {
+  font-family: "entyposocial";
+  src: url("./fonts/entyposocial/entyposocial.tff") format("ttf");
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+//@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700';
+
+$baloo: 'Baloo';
+$raleway: 'Raleway';
+$Dosis: 'Dosis';
+$Titillium: 'Titillium Web';
+$entyposocial: 'entyposocial';
+
+
+
+h1, h2, h3, h4, h5, h6, nav ul li,.navbar-brand { font-family: $Dosis, sans-serif;}
+.h1, .h2 { line-height: 1.1; }
+body{font-family: $Titillium !important; color: $brand; }
+.page-title{
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  .page-sub-header{
+    font-family: $Titillium;
+  }
+}
+
+small {
+  font-size: 85%;
+}

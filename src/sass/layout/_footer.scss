@@ -1,0 +1,49 @@
+footer{
+  color:$grey;
+  padding:2em;
+  background-color: $black;
+  position: relative;
+  a{
+    color: white;
+  }
+  h4{
+    color: $highlight;
+  }
+  address{
+    font-size:$xSmallFont;
+    padding-top:1em;
+  }
+  &.sticky{
+    @include bp-large {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: block;
+    }
+  }
+  address{
+    color:$grey;
+  }
+  .footer-nav{
+    display: flex;
+    justify-content:center;
+    ul {
+      list-style-type: none;
+    }
+  }
+  div >{
+    padding: 10px 20px;
+  }
+  .footer-newsletter{
+    display:flex;
+    justify-content:flex-start;
+    input{
+      margin-left:1em;
+      border-radius: 0.5em 0 0 0.5em;
+      border:none;
+    }
+
+
+  }
+
+}

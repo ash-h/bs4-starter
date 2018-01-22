@@ -1,0 +1,50 @@
+nav {
+  background-color: $brand;
+  .navbar-toggle .icon-bar{
+    background-color: $highlight;
+  }
+  ul.nav li {
+    &.active {
+      a {
+        color: $highlight;
+      }
+    }
+    a{
+      color:$grey;
+      &:hover,&:focus{
+        color: $highlight;
+        background-color: $brand;
+      }
+    }
+  }
+  .dropdown-menu{
+    background-color: $brand;
+  }
+  .navbar-brand{
+    color: $highlight;
+    margin-top: -0.25em;
+  }
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+    background-color: $brand;
+    color: $highlight;
+  }
+}
+.navbar-brand > img {
+  &.logo {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    padding-right: .5em;
+    margin-top:-0.25em;
+  }
+}
+.site-search{
+  display:none;
+  padding-top:1em;
+  padding-bottom:2em;
+
+  input{
+    width:90%;
+    padding:1em;
+  }
+}

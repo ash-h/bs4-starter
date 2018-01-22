@@ -1,0 +1,29 @@
+body{
+  .t-nav-container{
+    overflow-x: hidden;
+  }
+}
+ul.reset{
+  -webkit-padding-start: 0;
+}
+
+.remove-padding{
+  padding:0;
+}
+.spacer-top{
+  padding-top:50px;
+}
+
+.profile-image{
+  width:150px;
+  height:150px;
+}
+
+.profile-image-small{
+  width:100px;
+  height:100px;
+}
+.profile-image-x-small{
+  width:75px;
+  height:75px;
+}

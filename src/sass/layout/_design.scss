@@ -1,0 +1,94 @@
+body{
+  background-color: white;
+
+}
+.brand{
+  background-color: $brand;
+  color: $grey;
+}
+
+.highlight {
+  background-color: $highlight;
+}
+.grey{
+  background-color: $grey;
+}
+.right{
+  float:right;
+}
+.fixed{
+  position: fixed;
+}
+.banner{
+  left:0;
+  top:0;
+  right:0;
+  height:50em;
+}
+
+.page-content{
+  background-color: $white;
+  height:100vh;
+  position: relative;
+  margin-top: 25em;
+}
+.alpha{
+  padding-left:0;
+}
+
+.omega{
+  padding-right:0;
+}
+.center{
+  margin:0 auto;
+  display: block;
+}
+
+.t-b-pad-10{
+  padding:10px 0;
+}
+.t-b-pad-20{
+  padding:20px 0;
+}
+
+.center{
+  margin:0 auto;
+  display: block;
+}
+.svg-icon{
+  width:24px;
+  height:24px;
+  padding-right: .5em;
+  margin-top:-0.25em;
+}
+
+.image-circled-s{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+}
+.newsletter-container {
+  background-color:$grey;
+  color: $grey;
+  padding:20px;
+}
+.info-panel{
+  h1{
+
+  }
+  p{
+    font-size: $xSmallFont;
+  }
+  img{
+    width:100%;
+    max-height:350px;
+  }
+  .text{
+    padding:20px;
+  }
+}
+.logo{
+  width:100px;
+}
+
+
