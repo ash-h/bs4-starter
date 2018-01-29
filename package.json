@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/ash-h/bs4-starter#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-html-partial": "^1.0.1",
     "gulp-sass": "^3.1.0"
   }
 }
