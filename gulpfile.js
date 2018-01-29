@@ -59,6 +59,9 @@ gulp.task('html:watch', function(){
 gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
+gulp.task('js:watch', function () {
+    gulp.watch('./src/js/**/*.js', ['js']);
+});
 gulp.task('js', function(){
     return gulp.src('./src/js/**/*.js')
         .pipe(gulp.dest("./dist/js"))
@@ -76,4 +79,4 @@ gulp.task('htmlbeautify', function() {
         .pipe(gulp.dest('./dist/'))
 });
 
-gulp.task('default', ['serve','sass:watch','html:watch','js','css','htmlbeautify']);
+gulp.task('default', ['serve','sass:watch','html:watch', 'js:watch','js','css','htmlbeautify']);
