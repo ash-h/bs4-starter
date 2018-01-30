@@ -10,16 +10,16 @@ fetch('./js/tree.json').then(r => r.json())
 
     const lone = document.getElementsByClassName('level__one'[0]);
     [...treel1].forEach(t1 => {
-        //console.log(t1.title);
+        const a = t1.title;
 
         if (t1.children != null) {
             //console.log(t1.children);
             [...t1.children].forEach(child => {
-                //console.log(child.title);
+                const b = child.title;
 
                 if (child.children != null) {
                     [...child.children].forEach(child3 => {
-                        console.log(child3.title);
+                        console.log(a +" - " +b  +" - "+child3.title);
                     });
                 }
             });
