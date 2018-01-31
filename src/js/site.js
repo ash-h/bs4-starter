@@ -12,12 +12,12 @@ fetch('./js/tree.json').then(r => r.json())
     [...treel1].forEach(t1 => {
         const a = t1.title;
 
-        if (t1.children != null) {
+        if (t1.children != null ) {
             //console.log(t1.children);
             [...t1.children].forEach(child => {
                 const b = child.title;
 
-                if (child.children != null) {
+                if (child.children != null && child.linkPart === 'range-rover') {
                     [...child.children].forEach(child3 => {
                         console.log(a +" - " +b  +" - "+child3.title);
                     });
