@@ -37,15 +37,19 @@ fetch('./js/tree.json').then(r => r.json())
                             <li>
                                ${cc.title}
                            </li>`;
+
+                            if (cc.children != null ) {
+                                console.log(p);
+                                [...cc.children].forEach(child3 => {
+
+                                    //p.innerHTML += `<ul class="ul__${cc.title}"></ul>`;
+                                    console.log(child3.title);
+
+                                });
+                            }
                         });
 
-                        if (cc.children != null ) {
-                            [...cc.children].forEach(child3 => {
-                                //p.innerHTML += `<ul class="ul__${cc.title}"></ul>`;
-                                console.log(child3);
 
-                            });
-                        }
                     });
                 }
             });
