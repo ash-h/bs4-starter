@@ -33,12 +33,15 @@ fetch('./js/tree.json').then(r => r.json())
                     [...child.children].forEach(cc=> {
                         const level3 = document.getElementsByClassName( 'ul__range-rover');
                         [...level3].forEach(p => {
-                            p.innerHTML += `<li>${cc.title}</li>`;
+                            p.innerHTML += `
+                            <li>
+                               ${cc.title}
+                           </li>`;
                         });
 
                         if (cc.children != null ) {
                             [...cc.children].forEach(child3 => {
-
+                                //p.innerHTML += `<ul class="ul__${cc.title}"></ul>`;
                                 console.log(child3);
 
                             });
