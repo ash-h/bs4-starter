@@ -30,7 +30,6 @@ fetch('./js/tree.json').then(r => r.json())
    function openlevel(list, classname) {
 
            [...list].forEach(item => {
-               console.log(item);
                //item.parentElement.classList.add(classname);
                const targetUL = item.querySelectorAll('ul')[0];//get target ul
 
