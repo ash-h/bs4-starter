@@ -90,5 +90,67 @@ body{
 .logo{
   width:100px;
 }
+.level__one {
+
+  .show {
+    display:block;
+  }
+  display: flex;
+  flex-direction: row;
+  a{ display:block;}
+
+  ul {
+    background-color: red;
+    width:250px;
+
+    flex-direction: column;
+
+    li {
+      display: flex;
+      a{ display:block;}
+
+
+      ul {
+        display: none;
+
+        margin-left:200px;
+        background-color: #869791;
+        position: absolute;
+        &.active {
+          display:flex;
+        }
+      }
+
+
+    }
+
+  }
+
+  ul li ul li ul{
+    background-color: #00c3b6;
+
+    li ul {
+      background-color: #e65848;
+    }
+
+  }
+  ul > li > ul {
+
+  }
+
+  ul > li > ul > li > ul {
+    &.active {
+      display:flex;
+    }
+
+  }
+
+  ul > li > ul > li > ul > li > ul{
+    &.active {
+      display:flex;
+    }
+
+  }
+}
 
 
