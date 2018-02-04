@@ -1,8 +1,7 @@
 fetch('./js/tree.json').then(r => r.json())
 .then(data => {
 
-    const tree = data;
-    const siteMap = tree.children;
+    const siteMap = data.children;
     const lone = document.getElementsByClassName('level__one')[0];
 
     function parseNodes(nodes) { // creates <ul>
@@ -38,6 +37,7 @@ fetch('./js/tree.json').then(r => r.json())
                if (targetUL !== undefined) {
                    targetUL.parentNode.classList.add('more');
                }
+
                const showul = () => {
                    if (targetUL !== undefined) {
                        targetUL.classList.add('active');
@@ -50,7 +50,6 @@ fetch('./js/tree.json').then(r => r.json())
                    if ( menu !== undefined && menu.classList.contains('active') === true) {
                        menu.classList.remove('active');
                    }
-
                };
 
                item.addEventListener('mouseenter', showul);
