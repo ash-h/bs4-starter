@@ -107,6 +107,8 @@ body{
 
     li {
       display: flex;
+      padding:10px;
+      cursor: pointer;
       a{ display:block;}
 
 
@@ -116,6 +118,7 @@ body{
         margin-left:200px;
         background-color: #869791;
         position: absolute;
+
         &.active {
           display:flex;
         }
