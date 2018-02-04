@@ -18,7 +18,6 @@ fetch('./js/tree.json').then(r => r.json())
 
     function parseNode(node) { // creates <li>
         let li = document.createElement("LI");
-        li.className = node.linkPart;
         li.innerHTML = `<a href="${node.linkPart}">${node.title}</a>`;
 
         if(node.children) li.appendChild(parseNodes(node.children));
@@ -31,26 +30,28 @@ fetch('./js/tree.json').then(r => r.json())
     const level1 = document.querySelectorAll('div.level__one > ul > li > ul > li');
     const level2 = document.querySelectorAll('div.level__one > ul > li > ul > li > ul > li' );
     const level3 = document.querySelectorAll('div.level__one > ul > li > ul > li > ul > li > ul > li' );
-    const uls = [];
 
-   function openlevel2(list, classname) {
 
+   function openlevel(list, classname) {
 
            [...list].forEach(item => {
-               item.parentElement.classList.add(classname);
-               const o = item.querySelectorAll('ul')[0];//get target ul
-               uls.push(o);
+               console.log(item);
+               //item.parentElement.classList.add(classname);
+               const targetUL = item.querySelectorAll('ul')[0];//get target ul
+
+               if (targetUL !== undefined) {
+                   targetUL.parentNode.classList.add('more');
+               }
 
 
-               const showul = (e) => {
-                   if (item.querySelectorAll('ul')[0] !== undefined) {
-                       item.querySelectorAll('ul')[0].classList.add('active');
-
+               const showul = () => {
+                   if (targetUL !== undefined) {
+                       targetUL.classList.add('active');
                     }
                };
 
                const hideul = (e) => {
-                   const d =e.target.querySelectorAll('ul')[0];
+                   const d = e.target.querySelectorAll('ul')[0];
 
                    if ( d !== undefined && d.classList.contains('active') === true) {
                        d.classList.remove('active');
@@ -65,10 +66,10 @@ fetch('./js/tree.json').then(r => r.json())
 
    }
 
-   openlevel2(root, 'root');
-   openlevel2(level1, 'level1');
-   openlevel2(level2 , 'level2');
-   openlevel2(level3, 'level3');
+   openlevel(root, 'root');
+   openlevel(level1, 'level1');
+   openlevel(level2 , 'level2');
+   openlevel(level3, 'level3');
 
 
 })
