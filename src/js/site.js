@@ -1,6 +1,3 @@
-
-
-
 fetch('./js/tree.json').then(r => r.json())
 .then(data => {
 
@@ -31,7 +28,6 @@ fetch('./js/tree.json').then(r => r.json())
     const level2 = document.querySelectorAll('div.level__one > ul > li > ul > li > ul > li' );
     const level3 = document.querySelectorAll('div.level__one > ul > li > ul > li > ul > li > ul > li' );
 
-
    function openlevel(list, classname) {
 
            [...list].forEach(item => {
@@ -42,8 +38,6 @@ fetch('./js/tree.json').then(r => r.json())
                if (targetUL !== undefined) {
                    targetUL.parentNode.classList.add('more');
                }
-
-
                const showul = () => {
                    if (targetUL !== undefined) {
                        targetUL.classList.add('active');
@@ -51,10 +45,10 @@ fetch('./js/tree.json').then(r => r.json())
                };
 
                const hideul = (e) => {
-                   const d = e.target.querySelectorAll('ul')[0];
+                   const menu = e.target.querySelectorAll('ul')[0];
 
-                   if ( d !== undefined && d.classList.contains('active') === true) {
-                       d.classList.remove('active');
+                   if ( menu !== undefined && menu.classList.contains('active') === true) {
+                       menu.classList.remove('active');
                    }
 
                };
