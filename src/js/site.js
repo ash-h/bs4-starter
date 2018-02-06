@@ -2,6 +2,34 @@ fetch('./js/tree.json').then(r => r.json())
 .then(data => {
 
     const siteMap = data.children;
+    //console.log(siteMap);
+    const f = [];
+    const level2items = [];
+    const level3items = [];
+        [...siteMap].forEach(root=> {
+        if (root.children !== undefined && root.linkPart === 'vehicles') {
+
+            [...root.children].forEach(levelTwoItem => {
+                if (levelTwoItem.children !== undefined && levelTwoItem.linkPart === 'range-rover-sport') {
+                    level2items.push(levelTwoItem.children);
+
+                    [...level2items[0]].forEach(levelThreeItem => {
+                        if (levelThreeItem.children !== undefined) {
+                            level3items.push(levelThreeItem.children);
+                        }
+                    });
+
+                }
+            });
+
+            f.push(root.children);
+            console.log(level2items);
+            console.log(level3items);
+
+        }
+    });
+
+
     const lone = document.getElementsByClassName('level__one')[0];
 
     function parseNodes(nodes) { // creates <ul>
@@ -20,7 +48,9 @@ fetch('./js/tree.json').then(r => r.json())
         return li;
     }
 
-    lone.appendChild(parseNodes(siteMap));
+    //console.log(level2items);
+    lone.appendChild(parseNodes(f[0]));
+
 
     const root = document.querySelectorAll('div.level__one > ul > li ');
     const level1 = document.querySelectorAll('div.level__one > ul > li > ul > li');
