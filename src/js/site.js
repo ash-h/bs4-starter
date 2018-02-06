@@ -6,6 +6,7 @@ fetch('./js/tree.json').then(r => r.json())
     const f = [];
     const level2items = [];
     const level3items = [];
+    const level4items = [];
         [...siteMap].forEach(root=> {
         if (root.children !== undefined && root.linkPart === 'vehicles') {
 
@@ -16,15 +17,21 @@ fetch('./js/tree.json').then(r => r.json())
                     [...level2items[0]].forEach(levelThreeItem => {
                         if (levelThreeItem.children !== undefined) {
                             level3items.push(levelThreeItem.children);
+
+                            [...level3items].forEach(levelFourItem => {
+                                if (levelFourItem.children !== undefined) {
+                                    level4items.push(levelFourItem.children);
+                                }
+                            });
                         }
                     });
-
                 }
             });
 
             f.push(root.children);
             console.log(level2items);
             console.log(level3items);
+            console.log(level4items);
 
         }
     });
